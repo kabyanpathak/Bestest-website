@@ -1,0 +1,51 @@
+.image {
+	height: 56px;
+	width: auto;
+}
+
+
+.search {
+	position: relative;
+	transform: scale(2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: -40px;
+}
+
+.cat {
+	height: 56px;
+	width: auto;
+}
+
+.cat_div {
+	background: transparent;
+	position: relative;
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	top: -75px;
+	left: -90px;
+
+}
+
+.prof {
+	height: 56px;
+	width: auto;
+}
+
+.prof_div {
+	position: relative;
+	position: relative;
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	top: -135px;
+	left: -15px;
+}
+
+.divimg {
+	background: blue;
+	height: 61px;
+	width: auto;
+}
