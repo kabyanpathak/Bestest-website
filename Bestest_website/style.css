@@ -15,7 +15,14 @@ body
     font-family: sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana;
     text-align: center;
     color: #333;
-    
+    transition: ease-out 1s;
+
+}
+.title:hover
+{
+    color: #333;
+    font-size:35px;
+    transition: ease-in 0.5s;
 }
 nav
 {
@@ -39,7 +46,6 @@ li
 }
 li:hover
 {
-    background-color: #eeeeee;
     color: white;
     font-size: 20px;
     transition: ease-out 0.5s;
