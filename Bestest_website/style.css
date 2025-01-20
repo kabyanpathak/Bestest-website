@@ -11,17 +11,20 @@ body
 }
 .title
 {
-    font-size: 40px;
-    font-family: sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana;
     text-align: center;
-    color: #333;
-    transition: ease-out 1s;
 
 }
-.title:hover
+.content
+{
+    font-size: 35px;
+    padding:10px;
+    display:inline-block;
+    transition: ease-out 1s;
+}
+.content:hover
 {
     color: #333;
-    font-size:35px;
+    font-size:40px;
     transition: ease-in 0.5s;
 }
 nav
@@ -49,5 +52,9 @@ li:hover
     color: white;
     font-size: 20px;
     transition: ease-out 0.5s;
+}
+main
+{
+    background-color:darkseagreen;
 }
 
