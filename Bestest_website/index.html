@@ -8,27 +8,39 @@
 </head>
 
 <body>
-	<div class="divimg">
-		<header>
-			<a href="index.html">
-				<img src="cool.jpg" class="image">
-			</a>
-			<div class="search">
-				<input type="text" id="search-bar" placeholder="search show.....">
-			</div>
+	<div class="nav-bar">
+		<div class="nav-bar-content-logo">
+			<a href=""><img src="icons/app.png" alt="Logo" id="logo1"></a>
+			<a href=""><img src="icons/earth.png" alt="Logo" id="logo2"></a>
+		</div>
+		<br>
+		<div class="nav-bar-content-info">
+			<b>
+				<a href=""><img src="icons/home-button.png" alt="profile" width="25px" height="25px"> Home</a>
+				<a href=""><img src="icons/info.png" alt="profile" width="25px" height="25px"> About</a>
+				<a href=""><img src="icons/profile.png" alt="profile" width="25px" height="25px"> Profile</a>
+			</b>
+		</div>
+		<br>
+		<div class="nav-bar-content-search">
+			<input type="text" placeholder="search">
+		</div>
+	</div>
+	<div class="sign-in">
+		<div class="sign-in-content">
 
-			<div class="cat_div">
-				<a>
-					<img src="categories.png" class="cat">
-				</a>
-			</div>
-			<div class="prof_div">
-				<a>
-					<img src="profile.webp" class="prof">
-				</a>
-			</div>
+			<b>
+				<form action="" method="post">
+				<label for="username">username:</label>
+				<input type="text" id="username" name="username" required min="5" max="10">
 
-		</header>
+				<br>
+				<label for="password">password:</label>
+				<input type="text" id="username" name="username" required min="6" max="20">
+				<br>
+				<input type="submit" value="submit" class="submit">
+			</b>
+		</div>
 	</div>
 </body>
 

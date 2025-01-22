@@ -1,51 +1,112 @@
-.image {
-	height: 56px;
-	width: auto;
+body 
+{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: rgb(7, 17, 17);
+}
+.nav-bar 
+{
+	background-color: #333;
+	padding: 10px 20px;
+	position: absolute;
+	width: 60%;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+.nav-bar-content-logo
+{
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+.nav-bar-content-info a 
+{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 10px;
+	transition: ease-in 0.5s;
+}
+.nav-bar-content-info a:hover 
+{
+	color: #ff9800;
+	font-size: 20px;
+	transition: ease-out 0.5s;
 }
 
+.nav-bar-content-logo img 
+{
+	width: auto;
+	height: 100px;
+	display: inline-block;
+	transition:ease-out 0.5s;
+}
 
-.search {
-	position: relative;
-	transform: scale(2);
+.nav-bar-content-logo img:hover 
+{
+	transform: scale(1.15);
+	cursor: default;
+	transition:ease-in-out 1s;
+}
+
+.nav-bar-content-search 
+{
 	display: flex;
 	align-items: center;
+	justify-content: left;
+	padding-left: 10px;
+
+}
+.nav-bar-content-search input
+{
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+}
+details
+{
+	color: white;
+	transition: ease-out 0.5s;
+}
+details:hover
+{
+	color: greenyellow;
+	transition: ease-in 0.5s;
+}
+.login-form
+{
+	display: flex;
 	justify-content: center;
-	top: -40px;
+	align-items: center;
+	height: 100px;
 }
-
-.cat {
-	height: 56px;
-	width: auto;
-}
-
-.cat_div {
-	background: transparent;
-	position: relative;
+.sign-in
+{
 	display: flex;
-	align-items: end;
-	justify-content: end;
-	top: -75px;
-	left: -90px;
-
+	justify-content: right;
+	align-items: center;
+	background-color: #dadada;
+	padding: 60px 10px;
+	border-radius: 15px;
 }
-
-.prof {
-	height: 56px;
-	width: auto;
+.sign-in-content input
+{
+	padding: 10px;
+	margin: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: #c2c2c2;
 }
-
-.prof_div {
-	position: relative;
-	position: relative;
-	display: flex;
-	align-items: end;
-	justify-content: end;
-	top: -135px;
-	left: -15px;
+.sign-in-content .submit
+{
+	font-size:15px;
+	transition: ease-out 0.5s;
 }
-
-.divimg {
-	background: blue;
-	height: 61px;
-	width: auto;
+.sign-in-content .submit:hover
+{
+	background-color: #333;
+	color: white;
+	font-size: 16px;
+	transition: ease-in 0.25s;
 }
