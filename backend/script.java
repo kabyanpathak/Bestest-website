@@ -57,8 +57,9 @@ public class script {
     }
 
     public static void main(String[] args) {
+        script s = new script();
         try {
-            initialize();
+            s.initialize();
         } catch (FileNotFoundException e) {
             System.out.println("You fucked up");
             return;
