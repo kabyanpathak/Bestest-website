@@ -3,13 +3,15 @@ use std::fs;
 
 #[tokio::main]
 async fn main() {
-    //gets the css file
-    let app = Router::new().route("/", get(main_page()));
-
     let listener = tokio::net::TcpListener::bind("127.0.0.1:7878")
         .await
         .unwrap();
-    axum::serve(listener, app).await.unwrap();
+
+    axum::serve(listener, routeer()).await.unwrap();
+}
+
+fn routeer() -> Router {
+    Router::new().route("/", get(main_page()))
 }
 
 fn main_page() -> Html<String> {
