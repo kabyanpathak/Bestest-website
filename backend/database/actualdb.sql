@@ -1,8 +1,6 @@
 CREATE TABLE manhwa (
     manhwa_key serial PRIMARY KEY,
     name varchar(255) NOT NULL UNIQUE,
-    author varchar(255) NOT NULL UNIQUE,
-    artist varcharr (255) NOT NULL UNIQUE
 );
 
 CREATE TABLE creator (
@@ -21,6 +19,8 @@ CREATE TABLE info (
 CREATE TABLE manhwa_info (
     manhwa_key int NOT NULL,
     info_id int NOT NULL,
+    author_id int NOT NULL,
+    artist_id int NOT NULL
 );
 
 CREATE TABLE creator_info (
