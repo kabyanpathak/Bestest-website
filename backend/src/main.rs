@@ -1,5 +1,6 @@
 use axum::{Router, response::Html, routing::get};
 use std::fs;
+mod scrape;
 
 #[tokio::main]
 async fn main() {
