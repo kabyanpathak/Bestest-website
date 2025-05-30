@@ -4,6 +4,13 @@ mod scrape;
 
 #[tokio::main]
 async fn main() {
+    loop {
+        let val: bool = scrape::run().await;
+        if val {
+            break;
+        }
+    }
+
     let listener = tokio::net::TcpListener::bind("127.0.0.1:7878")
         .await
         .unwrap();
