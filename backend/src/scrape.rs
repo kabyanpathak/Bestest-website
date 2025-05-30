@@ -2,8 +2,7 @@ use reqwest::Client;
 use scraper::Html;
 use std::io;
 
-#[tokio::main]
-async fn main() {
+pub async fn run() -> bool {
     let client = Client::new();
     let mut website = String::new();
 
@@ -12,25 +11,52 @@ async fn main() {
             website = website.trim().to_string();
         }
         Err(e) => {
-            print!("{}", e);
+            println!("{}", e);
         }
     }
 
-    let response = client.get(website).send().await;
+    if website == "exit" {
+        return true;
+    }
 
+    let mut content = String::new();
     match client.get(&website).send().await {
-        Err(_) {
+        Ok(response) => {
+            if response.status().is_success() {
+                match response.text().await {
+                    Ok(html) => {
+                        content = html;
+                    }
+                    Err(_) => {
+                        println!("Website Fail");
+                    }
+                }
+            }
+        }
+        Err(_) => {
             print!("website {} failed", website);
         }
     }
+    add_db(&(create(content)));
+    false
 }
 
-fn create(web: String) -> Html<String> {}
+fn add_db(site: &Html) {
+    println!("\n--- Full HTML Content ---");
+    println!("{}", site.html());
+    println!("-------------------------\n");
+}
 
-struct Manhwa {
+fn create(web: String) -> Html {
+    Html::parse_document(&web)
+}
+
+/*
+ struct Manhwa {
     title: u32,
     titles: Vec<String>,
     authors: Vec<String>,
     genres: Vec<String>,
     synopsis: String,
 }
+*/
